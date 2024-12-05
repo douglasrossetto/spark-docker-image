@@ -1,0 +1,21 @@
+{
+    "name": "Spark with AWS",
+    "build": {
+      "dockerfile": "./Dockerfile",
+      "context": ".."
+    },
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "mounts": [
+      "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+    "workspaceFolder": "/workspace",
+    "remoteEnv": {
+      "AWS_PROFILE": "will-prod-sso"
+    },
+    "forwardPorts": [4040],
+    "postCreateCommand": "pip install -r /tmp/requirements.txt",
+    "remoteUser": "root"
+  }
+  

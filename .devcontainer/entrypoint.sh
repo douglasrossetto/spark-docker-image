@@ -6,4 +6,4 @@ if [ -f /config/aws_credentials.env ]; then
 fi
 
 # Executar o script principal
-python3 main.py
+#python3 main.py
