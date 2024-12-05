@@ -18,8 +18,7 @@ RUN curl -o /opt/spark/jars/hadoop-aws-3.3.2.jar \
     https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.12.465/aws-java-sdk-bundle-1.12.465.jar
 
 # Instalar bibliotecas Python necessárias
-COPY requirements.txt /tmp/requirements.txt
-
+COPY ./requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 
 # Definir diretório de trabalho
