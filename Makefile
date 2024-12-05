@@ -3,7 +3,7 @@ IMAGE_NAME = docker-spark-aws
 CONTAINER_NAME = spark-aws-container
 CONFIG_DIR = $(PWD)/config
 APP_DIR = $(PWD)/app
-AWS_PROFILE = will-prod-sso
+AWS_PROFILE ?= 
 TOKEN_SCRIPT = $(CONFIG_DIR)/generate_token.py
 
 # Construir a imagem Docker
