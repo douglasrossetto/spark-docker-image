@@ -15,7 +15,7 @@
     "AWS_SHARED_CREDENTIALS_FILE": "/root/.aws/credentials",
     "AWS_DEFAULT_REGION": "sa-east-1"
   },
-  "postCreateCommand": "pip install -r /workspace/requirements.txt",
+  "postCreateCommand": "pip install -r /tmp/requirements.txt",
   "extensions": [
     "ms-python.python",
     "ms-toolsai.jupyter",
