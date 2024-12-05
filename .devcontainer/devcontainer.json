@@ -1,0 +1,26 @@
+{
+  "name": "Spark Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "/bin/bash"
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder}/app,target=/workspace,type=bind",
+    "source=${localWorkspaceFolder}/config/aws_credentials.env,target=/root/.aws/credentials,type=bind"
+  ],
+  "remoteEnv": {
+    "AWS_SHARED_CREDENTIALS_FILE": "/root/.aws/credentials",
+    "AWS_DEFAULT_REGION": "sa-east-1"
+  },
+  "postCreateCommand": "pip install -r /tmp/requirements.txt",
+  "extensions": [
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+    "redhat.vscode-yaml"
+  ],
+  "forwardPorts": [4040, 8888],
+  "workspaceFolder": "/workspace"
+}
