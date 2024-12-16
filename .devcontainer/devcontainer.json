@@ -8,7 +8,7 @@
     "terminal.integrated.defaultProfile.linux": "/bin/bash"
   },
   "mounts": [
-    "source=${localWorkspaceFolder}/app,target=/workspace,type=bind",
+    "source=${localWorkspaceFolder}/testes,target=/workspace,type=bind",
     "source=${localWorkspaceFolder}/config/aws_credentials.env,target=/root/.aws/credentials,type=bind"
   ],
   "remoteEnv": {
